@@ -24,6 +24,8 @@ namespace pop_arr
             any = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(valida(dia, mes, any) ? Msg_Correct : Msg_Error);
+
+            Menu();
         }
 
         public static bool valida(int day, int month, int year)
@@ -87,6 +89,35 @@ namespace pop_arr
 
             else return true;
 
+        }
+
+        public static void Menu()
+        {
+            const string Msg_Menu = "Que vols fer?\r\nA. Saltar\r\nB. Córrer\r\nC. Ajupir-se\r\nD. Amagar-se";
+
+            Console.WriteLine(Msg_Menu);
+
+            char option = Convert.ToChar(Console.ReadLine());
+
+            switch (option)
+            {
+                case 'a':
+                case 'A':
+                    Console.WriteLine("Salta");
+                    break;
+                case 'b':
+                case 'B':
+                    Console.WriteLine("Corre");
+                    break;
+                case 'c':
+                case 'C':
+                    Console.WriteLine("Ajupir-se");
+                    break;
+                case 'd':
+                case 'D':
+                    Console.WriteLine("Amagar-se");
+                    break;
+            }
         }
     }
 }
